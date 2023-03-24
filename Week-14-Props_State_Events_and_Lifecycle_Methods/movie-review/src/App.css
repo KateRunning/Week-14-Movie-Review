@@ -1,0 +1,23 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+/* .movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: auto;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
