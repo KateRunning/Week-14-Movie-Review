@@ -1,6 +1,7 @@
 import React from 'react';
-import ReviewForm from './reviewForm';
-import {useState} from 'react'
+import ReviewForm from './ReviewForm';
+import {useState} from 'react';
+import SetStar from './Stars.js'
 
 const MovieList = (props) => {
    const [allReviews, setAllReviews] = useState([])  
@@ -18,7 +19,9 @@ const MovieList = (props) => {
                 <img src={movie.Poster} alt='movie'/>
                 
                 <br></br>
+                <SetStar />
                 <ReviewForm />
+                
             </div>
             </>
             

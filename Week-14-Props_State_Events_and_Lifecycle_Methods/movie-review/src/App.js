@@ -2,9 +2,10 @@ import { useState } from 'react'
 import logo from './logo.svg';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import MovieList from './components/movieList';
+import MovieList from './components/MovieList';
 import freakyfriday from './assets/freaky-friday.png';
-import everything from './assets/everything.jpg'
+import everything from './assets/everything.jpg';
+
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
 			<div className='row'>
         <MovieList movies={movies} />
 			</div>
+            
 		</div>
 	);
 };
