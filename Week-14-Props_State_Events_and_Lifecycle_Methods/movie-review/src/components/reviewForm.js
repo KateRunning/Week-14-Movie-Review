@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 const ReviewForm = (props) => {
@@ -12,39 +12,31 @@ const ReviewForm = (props) => {
     }
     const handleEvent = () => {
         // console.log('test')
+        setReview([])
         setAllReviews([...allReviews, review]) //spread operator holds all reviews
     }
-    const handleDelete = (d) => {
-        console.log('delete')
-        setReview(d.target.value)
+
+    function handleDelete(id) {
+        const reviewCopy = [...allReviews]
+        reviewCopy.splice(id, 1);
+        setAllReviews(reviewCopy);
     };
     return (
-        console.log(allReviews),
         <>
-        <input type="text" className="mt-3" onChange={handleChange} value={review}></input>
-        <button className="btn btn-warning m-5" onClick={handleEvent}>Leave Review!</button>
-        {allReviews.map((review, value) => (
-            <li key={value}>
-                {review}
-                <button data-value={value} onClick={handleDelete} >
-                    Delete
-                </button>
-            </li>
-        ))}
+            <input type="text" className="form mt-3" onChange={handleChange} value={review} ></input>
+            <button className="btn btn-warning m-5" onClick={handleEvent}>Leave Review!</button>
+
+            {allReviews.map((review, id) => (
+                <li className="list" key={id}>
+                    {review}
+                    <button className='btn btn-danger btn-sm ms-5' id={id} onClick={() => handleDelete(id)} >
+                        Delete
+                    </button>
+                </li>
+            ))}
         </>
-        //wrap a map method in {} allReviews.map(reviewOne, index) ^ below button
-        // {comments.map((comment, index) => (
-        //     <li key={index}>
-        //         {comment}
-        //         <button data-index={index} onClick={deleteComment}>
-        //         Delete
-        //         </button>
-        //     </li>
-        // onClick={setReview}
-    )
-}
-
-
-
+    );
+};
 
 export default ReviewForm;
+

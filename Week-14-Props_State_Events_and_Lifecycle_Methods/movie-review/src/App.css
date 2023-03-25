@@ -1,12 +1,24 @@
 body {
-	background: #b6bbca;
+	background: #2d3242;
 	color: #ffffff;
 }
 
-/* .movie-app > .row {
-	overflow-x: auto;
-	flex-wrap: auto;
-} */
+#Synopsis {
+  width: 50em;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.form {
+  font-size: 24px;
+}
+
+.list {
+  font-size: 24px;
+  line-height: 3em;
+}
 
 .App-link {
   color: #61dafb;
